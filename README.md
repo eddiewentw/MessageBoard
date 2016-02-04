@@ -3,4 +3,4 @@
 
 設定選項在左上角喔~
 
-http:/github.eddiewen.me/MessageBoard/
+http://github.eddiewen.me/MessageBoard/
