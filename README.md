@@ -5,6 +5,6 @@
 
 http://github.eddiewen.me/MessageBoard/
 
-![screen shot](ScreenShot-1.png)
+![screen shot](images/ScreenShot-1.png)
 
-![screen shot](ScreenShot-2.png)
+![screen shot](images/ScreenShot-2.png)
