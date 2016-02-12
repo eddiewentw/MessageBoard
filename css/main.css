@@ -1,0 +1,240 @@
+body {
+	width: 94%;
+	height: 100vh;
+	margin: 0px 3%;
+	padding: 0px;
+	font-size: 14px;
+	color: #000000;
+	font-family: "Open Sans";
+	font-weight: 300;
+}
+
+:focus {
+	outline: none !important;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.v-mid {
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: -moz-box;
+	display: flex;
+
+	-webkit-align-items: center;
+	   -moz-align-items: center;
+		-ms-align-items: center;
+			align-items: center;
+}
+
+/*******************************/
+
+#content {
+	width: 100%;
+	text-align: center;
+	font-size: 60px;
+	letter-spacing: 2px;
+	border: none;
+	background-color: transparent;
+	text-shadow: 0px 1px 0px white, 0px -1px 0px white, 1px 0px 0px white, -1px 0px 0px white;
+}
+
+#content.left {
+	text-align: left;
+}
+
+#content.right {
+	text-align: right;
+}
+
+#content.white {
+	color: white;
+	text-shadow: 0px 1px 0px black, 0px -1px 0px black, 1px 0px 0px black, -1px 0px 0px black;
+}
+
+.control-area {
+	width: 70%;
+	height: 150px;
+	position: fixed;
+	top: 0px;
+	left: 3%;
+}
+
+.control-bar {
+	width: 350px;
+	padding: 10px 0px;
+	margin-top: -90px;
+	background-color: white;
+	text-align: center;
+	border-radius: 0px 0px 7px 7px;
+	box-shadow: 0px 3px 4px rgba( 0, 0, 0, 0.3 );
+
+	-webkit-transition: all 0.5s;
+	   -moz-transition: all 0.5s;
+		 -o-transition: all 0.5s;
+			transition: all 0.5s;
+}
+
+.control-area:hover .control-bar {
+	margin-top: 0px;
+}
+
+.control-bar > div {
+	display: inline-block;
+}
+
+.text-alignment {
+	width: 25px;
+	height: 25px;
+	background-image: url(../images/text.png);
+	background-position: 0px -25px;
+	cursor: pointer;
+}
+
+.text-alignment.left {
+	background-position-y: 0px; 
+}
+
+.text-alignment.right {
+	background-position-y: 25px; 
+}
+
+.text-color {
+	width: 23px;
+	height: 23px;
+	border: 1px solid #C9C9C9;
+	background-color: black;
+	margin: 0px 20px;
+	cursor: pointer;
+}
+
+.text-color.white {
+	background-color: white;
+}
+
+.text-size {
+	width: 50px;
+	padding: 0px;
+	margin: 0px;
+	margin-top: -3px;
+	font-family: 'Open Sans';
+	font-size: 22px;
+	font-weight: 300;
+	border: none;
+	border-bottom: 1px solid #D9D9D9;
+	vertical-align: top;
+	text-align: center;
+}
+
+.background-color {
+	width: 96px;
+	height: 23px;
+	border: 2px solid #C9C9C9;
+	position: relative;
+	margin-left: 20px;
+}
+
+.color-menu {
+	width: 118px;
+	height: 293px;
+	background-color: white;
+	position: absolute;
+	top: 50px;
+	left: -11px;
+	border-radius: 5px;
+	border: 1px solid rgba(0,0,0,0.4);
+	z-index: 3;
+	display: none;
+}
+
+.background-color:hover .color-menu {
+	display: block;
+}
+
+.color-menu .arrow {
+	width: 0px;
+	height: 0px;
+	border-color: transparent transparent white transparent;
+	border-style: solid;
+	border-width: 0px 15px 20px 15px;
+	position: absolute;
+	top: -20px;
+	left: 43px;
+}
+
+.color-menu .arrow::before {
+	content: '';
+	width: 0px;
+	height: 0px;
+	border-color: transparent transparent rgba(0,0,0,0.4) transparent;
+	border-style: solid;
+	border-width: 0px 16px 21px 16px;
+	position: absolute;
+	top: -1px;
+	left: -16px;
+	z-index: -1;
+
+}
+
+.color-menu .arrow::after {
+	content: '';
+	width: 100px;
+	height: 25px;
+	background-color: transparent;
+	position: absolute;
+	top: -5px;
+	left: -50px;
+	z-index: -3;
+}
+
+.color {
+	width: 86px;
+	height: 21px;
+	border: 2px solid white;
+	margin: 0px auto;
+	margin-top: 10px;
+	cursor: pointer;
+}
+
+.color:hover {
+	border: 2px solid #C9C9C9;
+}
+
+.color.white {
+	border: 2px solid #F4F4F4;
+}
+
+.color.white, .bg-white, .bg-white .background-color {
+	background-color: white;
+}
+
+.color.black, .bg-black, .bg-black .background-color {
+	background-color: black;
+}
+
+.color.yellow, .bg-yellow, .bg-yellow .background-color {
+	background-color: #F9BF3B;
+}
+
+.color.green, .bg-green, .bg-green .background-color {
+	background-color: #2ECC71;
+}
+
+.color.blue, .bg-blue, .bg-blue .background-color {
+	background-color: #4B77BE;
+}
+
+.color.orange, .bg-orange, .bg-orange .background-color {
+	background-color: #F64747;
+}
+
+.color.silver, .bg-silver, .bg-silver .background-color {
+	background-color: #BDC3C7;
+}
+
+.color.purple, .bg-purple, .bg-purple .background-color {
+	background-color: #9B59B6;
+}
