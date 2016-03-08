@@ -1,3 +1,12 @@
+var colorArray = document.getElementsByClassName('color');
+for( var i = 0; i < colorArray.length; i++ ) {
+	colorArray[i].addEventListener( 'click', function() {
+		document.body.className = `v-mid bg-${this.getAttribute('data-color')}`;
+	});
+}
+
+/////////////////
+
 $(document).ready( function(){
 
 	$content = $('#content');
@@ -31,11 +40,6 @@ $(document).ready( function(){
 	// Change text-size
 	$('.text-size').on( 'input', function() {
 		$content.css( 'font-size', parseInt( $(this).val() ) );
-	});
-
-	// Change background-color
-	$('.color').on( 'click', function() {
-		$('body').removeClass().addClass( 'v-mid bg-'+$(this).attr('data-color') );
 	});
 
 });
