@@ -1,7 +1,17 @@
 var content = document.getElementById('content');
 
-var textColorArray = document.getElementsByClassName('text-color');
-// for
+document.getElementsByClassName('text-color')[0].addEventListener( 'click', function() {
+	if( this.getAttribute('data-color') == 'white' ) {
+		this.setAttribute('data-color', 'black');
+		this.className = 'text-color';
+		content.className = '';
+	}
+	else {
+		this.setAttribute('data-color', 'white');
+		this.className = 'text-color white';
+		content.className = 'white';
+	}
+});
 
 document.getElementsByClassName('text-size')[0].addEventListener( 'input', function() {
 	content.style.fontSize = `${parseInt(this.value)}px`;
@@ -32,17 +42,6 @@ $(document).ready( function(){
 		} else {
 			$(this).addClass('right');
 			$content.addClass('right');
-		}
-	});
-
-	// Change text-color
-	$('.text-color').on( 'click', function() {
-		if( $(this).hasClass('white') ) {
-			$(this).removeClass('white');
-			$content.removeClass('white');
-		} else {
-			$(this).addClass('white');
-			$content.addClass('white');
 		}
 	});
 
