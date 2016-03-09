@@ -1,12 +1,15 @@
 var content = document.getElementById('content');
 
+var textColorArray = document.getElementsByClassName('text-color');
+// for
+
 document.getElementsByClassName('text-size')[0].addEventListener( 'input', function() {
 	content.style.fontSize = `${parseInt(this.value)}px`;
 });
 
-var colorArray = document.getElementsByClassName('color');
-for( var i = 0; i < colorArray.length; i++ ) {
-	colorArray[i].addEventListener( 'click', function() {
+var bgColorArray = document.getElementsByClassName('color');
+for( var colorDiv of Array.from(bgColorArray) ) {
+	colorDiv.addEventListener( 'click', function() {
 		document.body.className = `v-mid bg-${this.getAttribute('data-color')}`;
 	});
 }
