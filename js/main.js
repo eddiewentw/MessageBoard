@@ -1,4 +1,19 @@
-var content = document.getElementById('content');
+const content = document.getElementById('content');
+
+document.getElementsByClassName('text-alignment')[0].addEventListener( 'click', function() {
+	content.className = '';
+
+	var alignClass = 'mid';
+	if( this.getAttribute('data-align') == 'right' ) {
+		alignClass = 'left';
+	}
+	else if( this.getAttribute('data-align') == 'mid' ) {
+		alignClass = 'right';
+	}
+	this.setAttribute('data-align', alignClass);
+	this.className = `text-alignment ${alignClass}`;
+	content.className = alignClass;
+});
 
 document.getElementsByClassName('text-color')[0].addEventListener( 'click', function() {
 	if( this.getAttribute('data-color') == 'white' ) {
@@ -23,26 +38,3 @@ for( var colorDiv of Array.from(bgColorArray) ) {
 		document.body.className = `v-mid bg-${this.getAttribute('data-color')}`;
 	});
 }
-
-/////////////////
-
-$(document).ready( function(){
-
-	$content = $('#content');
-
-	// Change text-alignment
-	$('.text-alignment').on( 'click', function() {
-		$content.removeClass('left right');
-
-		if( $(this).hasClass('left') ) {
-			$(this).removeClass('left');
-		} else if( $(this).hasClass('right') ) {
-			$(this).removeClass('right').addClass('left');
-			$content.addClass('left');
-		} else {
-			$(this).addClass('right');
-			$content.addClass('right');
-		}
-	});
-
-});
