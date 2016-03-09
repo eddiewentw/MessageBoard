@@ -1,3 +1,9 @@
+var content = document.getElementById('content');
+
+document.getElementsByClassName('text-size')[0].addEventListener( 'input', function() {
+	content.style.fontSize = `${parseInt(this.value)}px`;
+});
+
 var colorArray = document.getElementsByClassName('color');
 for( var i = 0; i < colorArray.length; i++ ) {
 	colorArray[i].addEventListener( 'click', function() {
@@ -35,11 +41,6 @@ $(document).ready( function(){
 			$(this).addClass('white');
 			$content.addClass('white');
 		}
-	});
-
-	// Change text-size
-	$('.text-size').on( 'input', function() {
-		$content.css( 'font-size', parseInt( $(this).val() ) );
 	});
 
 });
