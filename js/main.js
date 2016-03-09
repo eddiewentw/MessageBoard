@@ -1,41 +1,40 @@
-$(document).ready( function(){
+const content = document.getElementById('content');
 
-	$content = $('#content');
+document.getElementsByClassName('text-alignment')[0].addEventListener( 'click', function(e) {
+	content.className = '';
 
-	// Change text-alignment
-	$('.text-alignment').on( 'click', function() {
-		$content.removeClass('left right');
-
-		if( $(this).hasClass('left') ) {
-			$(this).removeClass('left');
-		} else if( $(this).hasClass('right') ) {
-			$(this).removeClass('right').addClass('left');
-			$content.addClass('left');
-		} else {
-			$(this).addClass('right');
-			$content.addClass('right');
-		}
-	});
-
-	// Change text-color
-	$('.text-color').on( 'click', function() {
-		if( $(this).hasClass('white') ) {
-			$(this).removeClass('white');
-			$content.removeClass('white');
-		} else {
-			$(this).addClass('white');
-			$content.addClass('white');
-		}
-	});
-
-	// Change text-size
-	$('.text-size').on( 'input', function() {
-		$content.css( 'font-size', parseInt( $(this).val() ) );
-	});
-
-	// Change background-color
-	$('.color').on( 'click', function() {
-		$('body').removeClass().addClass( 'v-mid bg-'+$(this).attr('data-color') );
-	});
-
+	var alignClass = 'mid';
+	if( e.currentTarget.getAttribute('data-align') == 'right' ) {
+		alignClass = 'left';
+	}
+	else if( e.currentTarget.getAttribute('data-align') == 'mid' ) {
+		alignClass = 'right';
+	}
+	e.currentTarget.setAttribute('data-align', alignClass);
+	e.currentTarget.className = `text-alignment ${alignClass}`;
+	content.className = alignClass;
 });
+
+document.getElementsByClassName('text-color')[0].addEventListener( 'click', function(e) {
+	if( e.currentTarget.getAttribute('data-color') == 'white' ) {
+		e.currentTarget.setAttribute('data-color', 'black');
+		e.currentTarget.className = 'text-color';
+		content.className = '';
+	}
+	else {
+		e.currentTarget.setAttribute('data-color', 'white');
+		e.currentTarget.className = 'text-color white';
+		content.className = 'white';
+	}
+});
+
+document.getElementsByClassName('text-size')[0].addEventListener( 'input', function(e) {
+	content.style.fontSize = `${parseInt(e.currentTarget.value)}px`;
+});
+
+var bgColorArray = document.getElementsByClassName('color');
+for( var colorDiv of Array.from(bgColorArray) ) {
+	colorDiv.addEventListener( 'click', function(e) {
+		document.body.className = `v-mid bg-${e.currentTarget.getAttribute('data-color')}`;
+	});
+}
