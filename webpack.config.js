@@ -1,8 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
 const cssnext = require('postcss-cssnext');
-const mixins = require('postcss-mixins');
-const extend = require('postcss-extend');
 const autoAndMark = require('./postcss-auto-and-mark');
 const HtmlWebpakcPlugin = require('html-webpack-plugin');
 
@@ -63,8 +61,6 @@ module.exports = {
 	},
 	postcss: [
 		autoAndMark(),
-		mixins(),
-		extend(),
 		cssnext(),
 	],
 }

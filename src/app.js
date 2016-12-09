@@ -3,27 +3,24 @@ import './css/main.css';
 
 const content = document.getElementById('content');
 
+const nextAlignMap = {
+	right: 'left',
+	mid: 'right',
+	left: 'mid',
+};
+
 document.getElementsByClassName('text-alignment')[0].addEventListener( 'click', (e) => {
 
-	let alignClass = 'mid';
+	content.className = content.className.replace(
+		e.currentTarget.getAttribute('data-align'),
+		nextAlignMap[
+			e.currentTarget.getAttribute('data-align')
+		]
+	);
 
-	if( e.currentTarget.getAttribute('data-align') === 'right' ) {
-
-		alignClass = 'left';
-		content.className = content.className.replace( 'right', 'left' );
-
-	}
-	else if( e.currentTarget.getAttribute('data-align') === 'mid' ) {
-
-		alignClass = 'right';
-		content.className = content.className.replace( 'mid', 'right' );
-
-	}
-	else {
-
-		content.className = content.className.replace( 'left', 'mid' );
-
-	}
+	const alignClass = nextAlignMap[
+		e.currentTarget.getAttribute('data-align')
+	];
 
 	e.currentTarget.setAttribute('data-align', alignClass);
 	e.currentTarget.className = `text-alignment ${alignClass}`;
@@ -32,20 +29,19 @@ document.getElementsByClassName('text-alignment')[0].addEventListener( 'click', 
 
 document.getElementsByClassName('text-color')[0].addEventListener( 'click', (e) => {
 
-	if( e.currentTarget.getAttribute('data-color') === 'white' ) {
+	const setTextColorToBlack = e.currentTarget.getAttribute('data-color') === 'white';
 
-		e.currentTarget.setAttribute('data-color', 'black');
-		e.currentTarget.className = 'text-color';
+	e.currentTarget.setAttribute('data-color', setTextColorToBlack ? 'black' : 'white');
+	e.currentTarget.className = `text-color ${setTextColorToBlack || 'white'}`;
+
+	if( setTextColorToBlack ) {
+
 		content.className = content.className.replace('white', '');
+		return;
 
 	}
-	else {
 
-		e.currentTarget.setAttribute('data-color', 'white');
-		e.currentTarget.className = 'text-color white';
-		content.className = `${content.className} white`;
-
-	}
+	content.className = `${content.className} white`;
 
 });
 
