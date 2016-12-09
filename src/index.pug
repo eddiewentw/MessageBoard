@@ -1,0 +1,55 @@
+doctype html
+html
+
+	head
+
+		title Message Board
+
+		meta(charset='UTF-8')
+		meta(http-equiv='X-UA-Compatible' content='IE=edge,chrome=1')
+		meta(name='viewport' content='width=device-width, initial-scale=1.0')
+
+		meta(name='description' content='Write a message for someone')
+		meta(name='author' content='Eddie Wen | 溫奕書')
+		meta(name='URL' content='http://github.eddiewen.me/MessageBoard/')
+		meta(name='image' content='http://github.eddiewen.me/MessageBoard/images/website.png')
+
+		meta(property='og:site_name' content='Message Board')
+		meta(property='og:title' content='Message Board')
+		meta(property='og:type' content='website')
+		meta(property='og:url' content='http://github.eddiewen.me/MessageBoard/')
+		meta(property='og:image' content='http://github.eddiewen.me/MessageBoard/images/website.png')
+		meta(property='og:description' content='Write a message for someone')
+
+	body.v-mid.bg-white
+
+		input#content.mid(type='text' value='離開一下，馬上回來。')
+
+		.control-area
+
+			.control-bar
+
+				//- 文字對齊
+				.text-alignment(data-align='mid')
+
+				//- 文字顏色(B/W)
+				.text-color(data-color='black')
+
+				//- 文字大小
+				input.text-size(type='text' value='60')
+
+				//- 背景顏色
+				.background-color
+
+					.color-menu
+
+						.arrow
+
+						.color.white(data-color='white')
+						.color.black(data-color='black')
+						.color.yellow(data-color='yellow')
+						.color.green(data-color='green')
+						.color.blue(data-color='blue')
+						.color.orange(data-color='orange')
+						.color.silver(data-color='silver')
+						.color.purple(data-color='purple')

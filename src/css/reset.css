@@ -1,0 +1,52 @@
+/*
+
+	EEEEEEEEEEEE             DDD             DDD
+	EEEEEEEEEEEE             DDD             DDD     II
+	EEEE                     DDD             DDD
+	EEEE                     DDD             DDD
+	EEEEEEEEEEEE    DDDDDDDDDDDD    DDDDDDDDDDDD    IIII	 EEEEEEEEEE
+	EEEEEEEEEEEE    DDDDDDDDDDDD    DDDDDDDDDDDD    IIII	EEE      EEE
+	EEEE            DDD      DDD    DDD      DDD    IIII	EEE      EEE
+	EEEE            DDD      DDD    DDD      DDD    IIII	EEEEEEEEEEEE
+	EEEEEEEEEEEE    DDDDDDDDDDDD    DDDDDDDDDDDD    IIII	EEE
+	EEEEEEEEEEEE    DDDDDDDDDDDD    DDDDDDDDDDDD    IIII     EEEEEEEEEE
+
+
+	WWWW            WWWW
+	WWWW    WWWW    WWWW
+	WWWW    WWWW    WWWW
+	WWWW    WWWW    WWWW
+	WWWW    WWWW    WWWW     EEEEEEEEEE     NN  NNNNNN
+	WWWW    WWWW    WWWW    EEE      EEE    NN NNNNNNNN
+	WWWW    WWWW    WWWW    EEE      EEE    NNNNN  NNNNN
+	 WWWW WWWWWWWW WWWW     EEEEEEEEEEEE    NNNN    NNNN
+	  WWWWWWW  WWWWWWW      EEE             NNNN    NNNN
+	   WWWWW    WWWWW        EEEEEEEEEE     NNNN    NNNN    from TAIWAN
+
+*/
+@import url('//fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+	width: 94%;
+	height: 100vh;
+	margin: 0px 3%;
+	padding: 0px;
+	font-size: 14px;
+	color: #000;
+	font-family: 'Open Sans';
+	font-weight: 300;
+}
+
+:focus {
+	outline: none !important;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.v-mid {
+	display: flex;
+	align-items: center;
+}

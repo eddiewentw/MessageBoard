@@ -1,0 +1,21 @@
+{
+	"extends": "stylelint-config-standard",
+	"ignoreFiles": [],
+	"rules": {
+		"color-hex-case": "upper",
+		"comment-empty-line-before": [ "always", {
+			"except": ["first-nested"],
+			"ignore": ["stylelint-commands"]
+		}],
+		"comment-whitespace-inside": null,
+		"function-parentheses-space-inside": null,
+		"indentation": "tab",
+		"length-zero-no-unit": null,
+		"max-empty-lines": null,
+		"media-feature-parentheses-space-inside": "always",
+		"number-leading-zero": "never",
+		"selector-list-comma-newline-after": "always-multi-line",
+		"selector-pseudo-element-colon-notation": "single",
+		"string-quotes": "single"
+	}
+}

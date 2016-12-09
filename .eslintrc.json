@@ -1,0 +1,23 @@
+{
+	"extends": "airbnb",
+	"env": {
+		"browser": true,
+		"es6": true,
+		"jest": true
+	},
+	"rules": {
+		"brace-style": [2, "stroustrup", { "allowSingleLine": true }],
+		"comma-dangle": [2, "always-multiline"],
+		"indent": [2, "tab", { "SwitchCase": 1 }],
+		"keyword-spacing": [2, { "after": false, "overrides": {
+			"from": { "after": true },
+			"else": { "after": true },
+			"import": { "after": true }
+		} }],
+		"max-len": [2, 120],
+		"no-param-reassign": [2, { "props": false }],
+		"no-tabs": [0],
+		"padded-blocks": [2, { "blocks": "always", "switches": "never" }],
+		"space-in-parens": [0, "never"]
+	}
+}
