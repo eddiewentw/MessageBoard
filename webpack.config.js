@@ -44,7 +44,6 @@ module.exports = {
 			template: 'src/index.pug',
 			inject: 'body',
 			filename: 'index.html',
-			// favicon: 'src/images/favicon.png',
 			minify: {
 				collapseBooleanAttributes: true,
 				collapseWhitespace: true,

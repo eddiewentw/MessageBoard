@@ -39,7 +39,6 @@
     "html-webpack-inline-source-plugin": "^0.0.5",
     "html-webpack-plugin": "^2.24.1",
     "ip": "^1.1.4",
-    "jest": "^17.0.3",
     "postcss": "^5.2.6",
     "postcss-cssnext": "^2.9.0",
     "postcss-loader": "^1.1.1",
